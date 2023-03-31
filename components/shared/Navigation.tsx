@@ -7,7 +7,7 @@ export function Navigation() {
             DQ Griffin
           </h1>
           <div className="flex space-x-4 items-center flex-row-reverse w-full lg:flex-initial lg:w-1/5">
-          <a className="border-2 border-slate-500 md:hover:bg-slate-700 lg:hover:bg-slate-700 transition duration-300 rounded-lg p-[5px]" href="#contact-form">Contact Me</a>
+            <a className="border-2 border-slate-500 md:hover:bg-slate-700 lg:hover:bg-slate-700 transition duration-300 rounded-lg p-[5px]" href="#contact-form">Contact Me</a>
           </div>
         </div>
       </div>
