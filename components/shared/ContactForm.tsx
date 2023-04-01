@@ -63,7 +63,7 @@ export function ContactForm () {
         return (
             <div className="flex flex-col justify-center items-center transition-all duration-1000">
                 <h3 className='text-3xl font-semibold my-4'>Thanks for reaching out!</h3>
-                <p className='text-center'>I'll get back to you as soon as I can.</p>
+                <p className='text-center'>I&apos;ll get back to you as soon as I can.</p>
             </div>
         )
     }
@@ -80,7 +80,7 @@ export function ContactForm () {
                 </div>
                 <div className='w-full'>
                     <p className='font-bold'>Your email*</p>
-                    <p className="text-red-600 text-sm mt-2" hidden={isEmailErrorHidden}>Hmm... That doesn't look like a valid email address</p>
+                    <p className="text-red-600 text-sm mt-2" hidden={isEmailErrorHidden}>Hmm... That doesn&apos;t look like a valid email address</p>
                     <input className='border-[2px] border-slate-500 focus:outline-none focus:border-contactbutton transition duration-300 bg-inputbg rounded mt-1 w-full h-12' aria-label="email-field" type="email" value={email} onInput={(e) => setEmail(e.currentTarget.value)} />
                 </div>
                 <div className='w-full'>
