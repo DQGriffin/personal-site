@@ -88,7 +88,7 @@ export function ContactForm () {
                     <p className="text-red-600 mt-2" hidden={isMessageErrorHidden}>You must provide a message</p>
                     <textarea className='border-[2px] border-slate-500 focus:outline-none bg-inputbg focus:border-contactbutton transition duration-300 w-full rounded' name="message" aria-label="message-field" value={message} id="" cols={30} rows={10} onInput={(e) => setMessage(e.currentTarget.value)}></textarea>
                 </div>
-                <button className='p-2 bg-contactbutton dark:bg-gray-200 dark:text-black disabled:bg-inputbg disabled:text-slate-500 dark:disabled:bg-zinc-900 dark:border-none transition duration-300 text-white rounded-lg' disabled={name === '' || email === '' || message === ''} onClick={handleSubmit}>Submit</button>
+                <button className='p-2 bg-contactbutton disabled:bg-inputbg disabled:text-slate-500 transition duration-300 text-white rounded-lg' disabled={name === '' || email === '' || message === ''} onClick={handleSubmit}>Submit</button>
             </div>
         </div>
     )
