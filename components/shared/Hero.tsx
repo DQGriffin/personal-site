@@ -2,6 +2,7 @@ import Image from 'next/image'
 import gitHubDark from '../../res/github-mark.svg'
 import gitHubLight from '../../res/github-mark-white.svg'
 import linkedInLogo from '../../res/linkedin.png'
+import scrollIndicator from '../../res/chevron-down.svg'
 
 export function Hero () {
     return (
@@ -14,6 +15,7 @@ export function Hero () {
                         <a href='https://www.github.com/DQGriffin' referrerPolicy='no-referrer' target='_blank' className='inline-block'><Image src={gitHubLight} alt='GitHub logo' width={30} height={30} className='' /></a>
                         <a href='https://www.linkedin.com/in/dqgriffin' referrerPolicy='no-referrer' target='_blank' className='inline-block'><Image src={linkedInLogo} alt='GitHub logo' width={30} height={30} className='' /></a>
                     </div>
+                    <Image className='mt-8 invert motion-safe:animate-bounce duration-100 transition-all' src={scrollIndicator} alt='Scroll indicator' width={25} height={25} />
                 </div>
             </div>
         </div>

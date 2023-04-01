@@ -1,8 +1,20 @@
+"use client"
+
 import Link from 'next/link'
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 export function FeaturedProject () {
+  const { ref, inView, entry } = useInView({threshold: 1});
+
+    useEffect(() => {
+        if (inView && entry) {
+            entry.target.classList.add('motion-safe:animate-fadeIn')
+        }
+    }, [inView])
+  
     return (
-        <div className='flex flex-col items-center text-center justify-center'>
+        <div className='flex flex-col items-center text-center justify-center motion-safe:opacity-0' ref={ref}>
           <h3 className='text-3xl font-semibold my-4'>Featured project</h3>
           <div className='flex flex-col justify-center items-center max-w-[700px] h-56 border-[1px] mx-4 border-gray-400 bg-navbg rounded-lg'>
             <p className='text-2xl font-semibold mb-2'>Croissant</p>
