@@ -4,6 +4,7 @@ import { Footer } from '@/components/shared/Footer'
 import { FeaturedProject } from '@/components/shared/FeaturedProject'
 import { Skills } from '@/components/shared/Skills'
 import { ContactForm } from '@/components/shared/ContactForm'
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <ContactForm />
       </div>
       <Footer />
+      <Analytics />
     </div>
   )
 }
