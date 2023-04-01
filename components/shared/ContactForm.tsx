@@ -84,7 +84,7 @@ export function ContactForm () {
                     <input className='border-[2px] border-slate-500 focus:outline-none focus:border-contactbutton transition duration-300 bg-inputbg rounded mt-1 w-full h-12' aria-label="email-field" type="email" value={email} onInput={(e) => setEmail(e.currentTarget.value)} />
                 </div>
                 <div className='w-full'>
-                    <p className='font-bold'>Message*</p>
+                    <p className='font-bold mb-1'>Message*</p>
                     <p className="text-red-600 mt-2" hidden={isMessageErrorHidden}>You must provide a message</p>
                     <textarea className='border-[2px] border-slate-500 focus:outline-none bg-inputbg focus:border-contactbutton transition duration-300 w-full rounded' name="message" aria-label="message-field" value={message} id="" cols={30} rows={10} onInput={(e) => setMessage(e.currentTarget.value)}></textarea>
                 </div>
