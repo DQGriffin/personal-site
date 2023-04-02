@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 
 
 export function Skills () {
-    const { ref, inView, entry } = useInView({threshold: 1});
+    const { ref, inView, entry } = useInView({threshold: .8});
 
     useEffect(() => {
         if (inView && entry) {
