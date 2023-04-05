@@ -17,7 +17,7 @@ export default function Home() {
         <ContactForm />
       </div>
       <Footer />
-      {/* <Analytics /> */}
+      <Analytics />
     </div>
   )
 }
