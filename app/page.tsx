@@ -8,15 +8,16 @@ import { Analytics } from '@vercel/analytics/react';
 
 export default function Home() {
   return (
-    <div className='bg-herobg text-navtext'>
-      <div className="container mx-auto space-y-32 mb-16">
-        <Hero />
+    <div className='text-gray-800 dark:text-navtext'>
+      <Hero />
+      <div className="container mx-auto space-y-32 mt-32 mb-16">
+        {/* <Hero /> */}
         <FeaturedProject />
         <Skills />
         <ContactForm />
       </div>
       <Footer />
-      <Analytics />
+      {/* <Analytics /> */}
     </div>
   )
 }

@@ -9,6 +9,6 @@
 
 @layer base {
     html {
-        @apply text-gray-800 bg-navbg dark:text-gray-200
+        @apply text-gray-800 bg-white dark:bg-zinc-900 dark:text-gray-200
     }
 }

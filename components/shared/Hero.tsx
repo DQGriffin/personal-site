@@ -1,13 +1,11 @@
 import Image from 'next/image'
-import gitHubDark from '../../res/github-mark.svg'
 import gitHubLight from '../../res/github-mark-white.svg'
 import linkedInLogo from '../../res/linkedin.png'
-import scrollIndicator from '../../res/chevron-down.svg'
 
 export function Hero () {
     return (
-        <div className='bg-herobg pt-24 text-zinc-50 md:mx-8'>
-            <div className="lg:container mt-20 md:mx-auto lg:mx-auto mx-4">
+        <div className='flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-purple-400 dark:from-black dark:to-black text-zinc-50'>
+            <div className="lg:container md:mx-auto lg:mx-auto mx-4">
                 <div className='w-full h-64 lg:h-[500px] flex justify-center items-center lg:items-start flex-col'>
                     <h2 className='text-2xl lg:text-5xl font-bold mb-2'>Hi, I&apos;m DQ.</h2>
                     <h2 className='text-2xl lg:text-5xl font-bold mb-2'>I build fun things for the web.</h2>
@@ -15,7 +13,6 @@ export function Hero () {
                         <a href='https://www.github.com/DQGriffin' referrerPolicy='no-referrer' target='_blank' className='inline-block'><Image src={gitHubLight} alt='GitHub logo' width={30} height={30} className='' /></a>
                         <a href='https://www.linkedin.com/in/dqgriffin' referrerPolicy='no-referrer' target='_blank' className='inline-block'><Image src={linkedInLogo} alt='GitHub logo' width={30} height={30} className='' /></a>
                     </div>
-                    <Image className='mt-8 invert motion-safe:animate-bounce duration-100 transition-all' src={scrollIndicator} alt='Scroll indicator' width={25} height={25} />
                 </div>
             </div>
         </div>

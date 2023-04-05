@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 export function FeaturedProject () {
-  const { ref, inView, entry } = useInView({threshold: 1});
+  const { ref, inView, entry } = useInView({threshold: .5});
 
     useEffect(() => {
         if (inView && entry) {
@@ -14,11 +14,11 @@ export function FeaturedProject () {
     }, [inView])
   
     return (
-        <div className='flex flex-col items-center text-center justify-center motion-safe:opacity-0' ref={ref}>
+        <div className='flex flex-col items-center text-gray-800 dark:text-navtext text-center justify-center motion-safe:opacity-0' ref={ref}>
           <h3 className='text-3xl font-semibold my-4'>Featured project</h3>
-          <div className='flex flex-col justify-center items-center max-w-[700px] h-56 border-[1px] mx-4 border-gray-400 bg-navbg rounded-lg'>
+          <div className='flex flex-col justify-center items-center max-w-[700px] h-56 border-[1px] mx-4 border-gray-400 bg-slate-100 dark:bg-zinc-700 rounded-lg'>
             <p className='text-2xl font-semibold mb-2'>Croissant</p>
-            <p className='text-sm mb-2 text-gray-400'>React · TypeScript · Material UI · RingCentral API</p>
+            <p className='text-sm mb-2 text-gray-800 dark:text-gray-400'>React · TypeScript · Material UI · RingCentral API</p>
             <p className='mb-2 px-4'>Croissant is a tool used internally at RingCentral to stand up and support customer accounts</p>
             <Link className=' underline underline-offset-4' href='https://github.com/RingCentral-Pro-Services/Croissant.js' target='_blank'>GitHub Repo</Link>
           </div>

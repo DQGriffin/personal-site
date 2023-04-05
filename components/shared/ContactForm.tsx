@@ -76,19 +76,19 @@ export function ContactForm () {
                 <div className='w-full'>
                     <p className='font-bold'>Your name*</p>
                     <p className="text-red-600 mt-2" hidden={isNameErrorHidden}>You must provide your name</p>
-                    <input className='border-[2px] border-slate-500 focus:outline-none focus:border-contactbutton transition duration-300 bg-inputbg rounded mt-1 w-full h-12 ' aria-label="name-field" type="text" value={name} onInput={(e) => setName(e.currentTarget.value)} />
+                    <input className='border-[2px] border-slate-300 dark:border-zinc-500 bg-slate-100 focus:outline-none focus:border-contactbutton transition duration-300 dark:bg-zinc-700 rounded mt-1 w-full h-12 ' aria-label="name-field" type="text" value={name} onInput={(e) => setName(e.currentTarget.value)} />
                 </div>
                 <div className='w-full'>
                     <p className='font-bold'>Your email*</p>
                     <p className="text-red-600 text-sm mt-2" hidden={isEmailErrorHidden}>Hmm... That doesn&apos;t look like a valid email address</p>
-                    <input className='border-[2px] border-slate-500 focus:outline-none focus:border-contactbutton transition duration-300 bg-inputbg rounded mt-1 w-full h-12' aria-label="email-field" type="email" value={email} onInput={(e) => setEmail(e.currentTarget.value)} />
+                    <input className='border-[2px] border-slate-300 dark:border-zinc-500 bg-slate-100 focus:outline-none focus:border-contactbutton transition duration-300 dark:bg-zinc-700 rounded mt-1 w-full h-12' aria-label="email-field" type="email" value={email} onInput={(e) => setEmail(e.currentTarget.value)} />
                 </div>
                 <div className='w-full'>
                     <p className='font-bold mb-1'>Message*</p>
                     <p className="text-red-600 mt-2" hidden={isMessageErrorHidden}>You must provide a message</p>
-                    <textarea className='border-[2px] border-slate-500 focus:outline-none bg-inputbg focus:border-contactbutton transition duration-300 w-full rounded' name="message" aria-label="message-field" value={message} id="" cols={30} rows={10} onInput={(e) => setMessage(e.currentTarget.value)}></textarea>
+                    <textarea className='border-[2px] border-slate-300 dark:border-zinc-500 bg-slate-100 focus:outline-none dark:bg-zinc-700 focus:border-contactbutton transition duration-300 w-full rounded' name="message" aria-label="message-field" value={message} id="" cols={30} rows={10} onInput={(e) => setMessage(e.currentTarget.value)}></textarea>
                 </div>
-                <button className='p-2 bg-contactbutton disabled:bg-inputbg disabled:text-slate-500 transition duration-300 text-white rounded-lg' disabled={name === '' || email === '' || message === ''} onClick={handleSubmit}>Submit</button>
+                <button className='p-2 bg-contactbutton dark:bg-zinc-500 disabled:bg-gray-300 dark:disabled:bg-zinc-800 disabled:text-slate-500 transition duration-300 text-white rounded-lg' disabled={name === '' || email === '' || message === ''} onClick={handleSubmit}>Submit</button>
             </div>
         </div>
     )
