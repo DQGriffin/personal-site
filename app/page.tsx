@@ -1,3 +1,4 @@
+"use client"
 
 import { Hero } from '@/components/shared/Hero'
 import { Footer } from '@/components/shared/Footer'
@@ -5,6 +6,7 @@ import { FeaturedProject } from '@/components/shared/FeaturedProject'
 import { Skills } from '@/components/shared/Skills'
 import { ContactForm } from '@/components/shared/ContactForm'
 import { Analytics } from '@vercel/analytics/react';
+import { BlogContext } from './blog/(models)/BlogContext'
 
 export default function Home() {
   return (

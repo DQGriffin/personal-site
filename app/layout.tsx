@@ -1,9 +1,20 @@
+"use client"
+
 import { Navigation } from '@/components/shared/Navigation'
+import { BlogContext } from './blog/(models)/BlogContext'
+import useSWR from 'swr';
 import './globals.css'
 
-export const metadata = {
-  title: 'DQ Griffin',
-  description: 'DQ Griffin personal website',
+const fetchBlogs =  async (url: string) => {
+  try {
+      const res = await fetch(url)
+      const data = await res.json() as Blog[]
+      return data
+  }
+  catch (e: any) {
+      console.log('Failed to fetch blogs')
+      return [] as Blog[]
+  }
 }
 
 export default function RootLayout({
@@ -11,12 +22,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const { data: blogs, error } = useSWR('/api/blogs', fetchBlogs);
+
   return (
-    <html lang="en">
+    <BlogContext.Provider value={blogs ?? []}>
+      <html lang="en">
       <body>
         <Navigation />
         {children}
       </body>
     </html>
+    </BlogContext.Provider>
   )
 }
